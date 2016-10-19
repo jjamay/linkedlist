@@ -64,3 +64,20 @@ var linkedList = function() {
     }
   }
 }
+
+// bonus function
+var isPalindrome = function(string) {
+  var length = string.length;
+  var end = length - 1;
+  if (string[0] == string[end]) {
+    if (end <= 1) {
+      return true;
+    } else {
+      return isPalindrome(string.substring(1, end - 1));
+    }
+  } else {
+    return false;
+  }
+}
+
+console.log(isPalindrome("Jordan"));
